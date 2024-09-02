@@ -1,0 +1,17 @@
+{
+  "name": "express_server_for_hap",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "latest",
+    "debug": "latest",
+    "ejs": "latest",
+    "express": "latest",
+    "http-errors": "latest",
+    "morgan": "latest",
+    "multer": "latest"
+  }
+}

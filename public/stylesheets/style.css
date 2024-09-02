@@ -1,0 +1,22 @@
+@import url('./index.css');
+
+@font-face {
+  font-family: '鸿蒙';
+  src: 
+    url('/fonts/HarmonyOS_Sans_Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-size: 2px;
+}
+
+body {
+  padding: 16rem;
+  font: 16rem "鸿蒙";
+}
+
+a {
+  color: #00B7FF;
+}

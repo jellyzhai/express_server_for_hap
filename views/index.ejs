@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= user %>
+  </title>
+  <link rel='stylesheet'
+        href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>Web 页面</h1>
+
+  <h2>Hello，欢迎 <%= user %> 来抽奖！</h2>
+
+  <div>
+    <span class="index-label">幸运数：</span>
+    <span class="index-result index-lucky-number">7</span>
+  </div>
+
+  <div>
+    <span class="index-label">抽到数字：</span>
+    <span class="index-result index-drawn-number">0</span>
+  </div>
+
+  <div>
+    <span class="index-label">剩余次数：</span>
+    <span class="index-result index-rest-times">5</span>
+  </div>
+
+  <div class="btn-box">
+    <button class="index-draw">抽奖</button>
+
+    <button class="index-update-lucky-number">随机更新幸运数字</button>
+
+    <button class="index-reset-rest-count">重置剩余次数</button>
+  </div>
+
+  <!-- js -->
+  <script src="/javascripts/index.js"></script>
+</body>
+
+</html>

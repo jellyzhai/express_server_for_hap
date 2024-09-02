@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <%= message
+            %>
+    </h1>
+
+    <script>
+        const userAgentStr = JSON.stringify(navigator.userAgent).toLowerCase()
+
+        if (userAgentStr.includes(('openHarmony').toLowerCase())) {
+            window.addEventListener('message', (event) => {
+                if (event.data === 'init_message_port') {
+                    prompt('收到应用侧的消息端口');
+
+                    event.ports[0].postMessage('not_login');
+                }
+            })
+        } else {
+            location.assign('/login')
+        }
+
+    </script>
+</body>
+
+</html>
