@@ -14,7 +14,9 @@
             %>
     </h1>
 
-    <script>
+    <button id="login">登录</button>
+
+    <script defer>
         const userAgentStr = JSON.stringify(navigator.userAgent).toLowerCase()
 
         if (userAgentStr.includes(('openHarmony').toLowerCase())) {
@@ -29,6 +31,9 @@
             location.assign('/login')
         }
 
+        document.getElementById('login').addEventListener('click', () => {
+            objFromHap?.goLoginPage('string from not login page');
+        })
     </script>
 </body>
 

@@ -5,7 +5,7 @@ var router = express.Router();
 router.get("/", function (req, res, next) {
   console.log("test_tag req.cookies", JSON.stringify(req.cookies));
   if (req.cookies?.username && req.cookies?.password) {
-    res.render("index", { user: req.cookies?.username  });
+    res.render("index", { user: decodeURI(req.cookies?.username)  });
   } else {
     res.render("not_login", {
       message: "请先登录"
